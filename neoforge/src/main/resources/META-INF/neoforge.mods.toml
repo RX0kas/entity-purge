@@ -1,0 +1,45 @@
+modLoader = "javafml"
+loaderVersion = "[2,)"
+#issueTrackerURL = ""
+license = "MIT"
+
+[[mods]]
+modId = "entitypurge"
+version = "${version}"
+displayName = "EntityPurge"
+authors = "RXokas"
+description = '''
+
+'''
+#logoFile = ""
+
+[[dependencies.entitypurge]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.entitypurge]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.4,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.entitypurge]]
+modId = "architectury"
+type = "required"
+versionRange = "[15.0.1,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.entitypurge]]
+modId = "midnightlib"
+type = "required"
+versionRange = "[1.6.7,)"
+ordering = "BEFORE"
+side = "BOTH"
+
+[[mixins]]
+config = "entitypurge.mixins.json"

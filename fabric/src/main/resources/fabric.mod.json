@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "entitypurge",
+  "version": "${version}",
+  "name": "EntityPurge",
+  "description": "",
+  "authors": [
+    "RXokas"
+  ],
+  "contact": {
+    "homepage": ""
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "fr.rxokas.entitypurge.fabric.EntitypurgeFabric"
+    ],
+    "client": [
+      "fr.rxokas.entitypurge.fabric.client.EntitypurgeFabricClient"
+    ]
+  },
+  "mixins": [
+    "entitypurge.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.10",
+    "minecraft": "~1.21.4",
+    "java": ">=21",
+    "architectury": ">=15.0.1",
+    "midnightlib": ">=1.6.7"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
