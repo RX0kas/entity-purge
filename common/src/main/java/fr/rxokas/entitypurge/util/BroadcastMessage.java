@@ -7,8 +7,6 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;
 
 public class BroadcastMessage {
-    public static String RESET = "§r";
-
     public static void broadcastToAllPlayers(MinecraftServer server, String message) {
         if (server != null && server.isRunning()) {
             Component textComponent = Component.literal(message);
@@ -22,6 +20,10 @@ public class BroadcastMessage {
     }
 
     public static void warn10sec(MinecraftServer server) {
-        broadcastToAllPlayers(server, ModConfig.warning10sMessage+RESET);
+        broadcastToAllPlayers(server, ModConfig.warning10sMessage+"§r");
+    }
+
+    public static void tellHappend(MinecraftServer server) {
+        broadcastToAllPlayers(server, ModConfig.warninghappendMessage+"§r");
     }
 }

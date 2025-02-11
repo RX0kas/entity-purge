@@ -1,9 +1,12 @@
 {
   "entitypurge.midnightconfig.title":"EntityPurge Config",
   "entitypurge.midnightconfig.clearItem": "Should purge Item",
-  "entitypurge.midnightconfig.minutesBetweenItemPurge": "Minutes between each purge",
+  "entitypurge.midnightconfig.minutesBetweenEachPurge": "Minutes between each purge",
   "entitypurge.midnightconfig.warning10s": "Show a message 10 seconds before",
   "entitypurge.midnightconfig.warning10sMessage": "The message that will be showed 10 seconds before",
-  "entitypurge.midnightconfig.category.warn": "Warning",
-  "entitypurge.midnightconfig.category.items": "Items"
+  "entitypurge.midnightconfig.entitiesToClear": "Each entity that should be purged",
+  "entitypurge.midnightconfig.category.broadcast": "Broadcast",
+  "entitypurge.midnightconfig.category.entities": "Entities",
+  "entitypurge.midnightconfig.warninghappend": "Show a message when done",
+  "entitypurge.midnightconfig.warninghappendMessage": "The message that will be showed after"
 }

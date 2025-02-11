@@ -13,6 +13,4 @@ public final class Entitypurge {
         MidnightConfig.init(MOD_ID, ModConfig.class);
         TickHandler.init();
     }
-
-
 }
