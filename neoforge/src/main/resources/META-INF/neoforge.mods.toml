@@ -40,6 +40,3 @@ type = "required"
 versionRange = "[1.6.7,)"
 ordering = "BEFORE"
 side = "BOTH"
-
-[[mixins]]
-config = "entitypurge.mixins.json"

@@ -1,7 +1,9 @@
 package fr.rxokas.entitypurge.fabric;
 
-import fr.rxokas.entitypurge.Entitypurge;
+import eu.midnightdust.lib.config.MidnightConfig;
 import net.fabricmc.api.ModInitializer;
+
+import static fr.rxokas.entitypurge.Entitypurge.MOD_ID;
 
 public final class EntitypurgeFabric implements ModInitializer {
     @Override
@@ -11,6 +13,8 @@ public final class EntitypurgeFabric implements ModInitializer {
         // Proceed with mild caution.
 
         // Run our common setup.
-        Entitypurge.init();
+        TickHandler.init();
+
+        MidnightConfig.init(MOD_ID, ModConfig.class);
     }
 }

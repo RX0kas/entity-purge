@@ -11,18 +11,12 @@
     "homepage": ""
   },
   "license": "MIT",
-  "environment": "*",
+  "environment": "server",
   "entrypoints": {
     "main": [
       "fr.rxokas.entitypurge.fabric.EntitypurgeFabric"
-    ],
-    "client": [
-      "fr.rxokas.entitypurge.fabric.client.EntitypurgeFabricClient"
     ]
   },
-  "mixins": [
-    "entitypurge.mixins.json"
-  ],
   "depends": {
     "fabricloader": ">=0.16.10",
     "minecraft": "~1.21.4",

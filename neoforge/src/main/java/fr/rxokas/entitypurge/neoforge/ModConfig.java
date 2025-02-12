@@ -1,4 +1,4 @@
-package fr.rxokas.entitypurge.config;
+package fr.rxokas.entitypurge.neoforge;
 
 import eu.midnightdust.lib.config.MidnightConfig;
 
@@ -8,7 +8,7 @@ import java.util.List;
 public class ModConfig extends MidnightConfig {
     public static final String ENTITIES = "entities";
     @Entry(category = ENTITIES) public static boolean clearItem = true;
-    @Entry(category = ENTITIES) public static int minutesBetweenEachPurge = 1;
+    @Entry(category = ENTITIES) public static int minutesBetweenEachPurge = 10;
     @Entry(category = ENTITIES) public static List<String> entitiesToClear = new ArrayList<>();
 
 

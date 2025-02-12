@@ -1,8 +1,6 @@
-package fr.rxokas.entitypurge;
+package fr.rxokas.entitypurge.fabric;
 
 import dev.architectury.event.events.common.TickEvent;
-import fr.rxokas.entitypurge.config.ModConfig;
-import fr.rxokas.entitypurge.util.BroadcastMessage;
 import fr.rxokas.entitypurge.util.Command;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -15,6 +13,8 @@ import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import static fr.rxokas.entitypurge.util.BroadcastMessage.broadcastToAllPlayers;
 
 public class TickHandler {
     private static final Logger LOGGER = LoggerFactory.getLogger(TickHandler.class);
@@ -57,11 +57,11 @@ public class TickHandler {
                     }
                 }
             }
-            if (ModConfig.warninghappend) BroadcastMessage.tellHappend(server);
+            if (ModConfig.warninghappend) broadcastToAllPlayers(server, ModConfig.warninghappendMessage + "§r");
 
             LOGGER.debug("Entity purge Done");
         } else if (ModConfig.warning10s && accumulator.lessThan10SecRemaining() && !alreadyWarn10s) {
-            BroadcastMessage.warn10sec(server);
+            broadcastToAllPlayers(server, ModConfig.warning10sMessage + "§r");
             alreadyWarn10s = true;
         }
     }
