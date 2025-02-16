@@ -3,15 +3,16 @@
   "id": "entitypurge",
   "version": "${version}",
   "name": "EntityPurge",
-  "description": "",
+  "description": "A simple ClearLag mod that aims to be as customizable as possible",
   "authors": [
     "RXokas"
   ],
   "contact": {
-    "homepage": ""
+    "homepage": "https://github.com/RX0kas/entity-purge",
+    "issues": "https://github.com/RX0kas/entity-purge/issues/"
   },
   "license": "MIT",
-  "environment": "server",
+  "environment": "*",
   "entrypoints": {
     "main": [
       "fr.rxokas.entitypurge.fabric.EntitypurgeFabric"

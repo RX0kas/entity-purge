@@ -1,6 +1,6 @@
 modLoader = "javafml"
 loaderVersion = "[2,)"
-#issueTrackerURL = ""
+issueTrackerURL = "https://github.com/RX0kas/entity-purge/issues/"
 license = "MIT"
 
 [[mods]]
@@ -9,7 +9,7 @@ version = "${version}"
 displayName = "EntityPurge"
 authors = "RXokas"
 description = '''
-
+A simple ClearLag mod that aims to be as customizable as possible
 '''
 #logoFile = ""
 
