@@ -7,6 +7,7 @@
   "authors": [
     "RXokas"
   ],
+  "icon": "logo.png",
   "contact": {
     "homepage": "https://github.com/RX0kas/entity-purge",
     "issues": "https://github.com/RX0kas/entity-purge/issues/"
