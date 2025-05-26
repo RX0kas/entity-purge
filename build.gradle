@@ -1,5 +1,5 @@
 plugins {
-    id 'dev.architectury.loom' version '1.9-SNAPSHOT' apply false
+    id 'dev.architectury.loom' version '1.10-SNAPSHOT' apply false
     id 'architectury-plugin' version '3.4-SNAPSHOT'
     id 'com.github.johnrengelman.shadow' version '8.1.1' apply false
 }
@@ -34,9 +34,9 @@ subprojects {
 
         // Inclure uniquement la version correcte de MidnightLib
         if (project.name == "fabric") {
-            modImplementation include("maven.modrinth:midnightlib:${midnightlib_version}-fabric")
+            modImplementation include("maven.modrinth:midnightlib:${midnightlib_version}+1.21.4-fabric")
         } else if (project.name == "neoforge") {
-            modImplementation include("maven.modrinth:midnightlib:${midnightlib_version}-neoforge")
+            modImplementation include("maven.modrinth:midnightlib:${midnightlib_version}+1.21.4-neoforge")
         }
     }
 

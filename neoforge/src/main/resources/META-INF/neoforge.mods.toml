@@ -23,20 +23,20 @@ side = "BOTH"
 [[dependencies.entitypurge]]
 modId = "minecraft"
 type = "required"
-versionRange = "[1.21.4,)"
+versionRange = "[1.21.5,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.entitypurge]]
 modId = "architectury"
 type = "required"
-versionRange = "[15.0.1,)"
+versionRange = "[16.1.4,)"
 ordering = "AFTER"
 side = "BOTH"
 
 [[dependencies.entitypurge]]
 modId = "midnightlib"
 type = "required"
-versionRange = "[1.6.7,)"
+versionRange = "[1.7.3,)"
 ordering = "BEFORE"
 side = "BOTH"

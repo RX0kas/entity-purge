@@ -19,6 +19,7 @@ import static fr.rxokas.entitypurge.util.BroadcastMessage.broadcastToAllPlayers;
 public class TickHandler {
     private static final Logger LOGGER = LoggerFactory.getLogger(TickHandler.class);
     private static final Accumulator accumulator = new Accumulator(ModConfig.minutesBetweenEachPurge);
+    private static final Accumulator updateThresholdAccumulator = new Accumulator(0.1f);
     private static final Map<String, EntityType<?>> entityTypeCache = new HashMap<>();
 
     private static boolean alreadyWarn10s = false;
@@ -39,6 +40,10 @@ public class TickHandler {
 
     private static void onServerTick(MinecraftServer server) {
         accumulator.add();
+        updateThresholdAccumulator.add();
+        if (updateThresholdAccumulator.canProcess()) {
+            accumulator.setThreshold(ModConfig.minutesBetweenEachPurge);
+        }
 
         if (accumulator.canProcess()) {
             LOGGER.debug("Starting entity purge...");
@@ -92,5 +97,7 @@ public class TickHandler {
         public boolean lessThan10SecRemaining() {
             return total >= tenSecondThreshold;
         }
+
+        public void setThreshold(float threshold) {this.threshold = threshold*1200;}
     }
 }
