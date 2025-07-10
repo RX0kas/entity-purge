@@ -58,10 +58,7 @@ public class TickHandler {
                         EntityType<?> entityType = entityTypeCache.get(entityId);
                         if (entityType == null) continue;
 
-                        serverLevel.getEntities(entityType, Entity::isAlive).forEach((entity) -> {
-                            if (!entity.getTags().contains("playerItem"))
-                                entity.remove(Entity.RemovalReason.DISCARDED);
-                        });
+                        serverLevel.getEntities(entityType, Entity::isAlive).forEach(entity -> entity.remove(Entity.RemovalReason.DISCARDED));
 
                     }
                 }

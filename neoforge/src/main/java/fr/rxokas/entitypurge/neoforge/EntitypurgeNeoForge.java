@@ -6,6 +6,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
 
 import static fr.rxokas.entitypurge.Entitypurge.MOD_ID;
@@ -17,6 +18,7 @@ public final class EntitypurgeNeoForge {
         TickHandler.init();
 
         MidnightConfig.init(MOD_ID, ModConfig.class);
+        NeoForge.EVENT_BUS.addListener(EntitypurgeNeoForge::onPlayerDeath);
     }
 
     @SubscribeEvent

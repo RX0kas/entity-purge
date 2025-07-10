@@ -8,7 +8,7 @@
 
 ### minutesBetweenEachPurge
 - **Description :** Specifies the time in minutes between each entity and object purge cycle
-- **Default value :** `1`
+- **Default value :** `10`
 
 ### entitiesToClear
 - **Description :** Contains the identifiers of the Minecraft entities that will be deleted during ClearLag
