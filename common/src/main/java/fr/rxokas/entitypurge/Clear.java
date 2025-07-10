@@ -2,6 +2,7 @@ package fr.rxokas.entitypurge;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.item.ItemEntity;
 
 import java.util.HashSet;
 
@@ -16,8 +17,13 @@ public class Clear {
             HashSet<Entity> entities = new HashSet<>();
             for (Entity entity : level.getAllEntities()) {
                 if (entityclass.isInstance(entity)) {
+                    if (entity instanceof ItemEntity itemEntity) {
+                        if (itemEntity.getTags().contains("playerItem"))
+                            continue;
+                    }
                     entities.add(entity);
                 }
+
             }
 
             Entitypurge.LOGGER.info(String.format("Found %d entities to remove", entities.size()));

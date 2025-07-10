@@ -50,7 +50,7 @@ public class TickHandler {
             accumulator.reduce();
             alreadyWarn10s = false;
 
-            if (ModConfig.clearItem) Command.execute(server, "kill @e[type=item]");
+            if (ModConfig.clearItem) Command.execute(server, "kill @e[type=item,tag=!playerItem]");
 
             if (!ModConfig.entitiesToClear.isEmpty()) {
                 for (ServerLevel serverLevel : server.getAllLevels()) {
@@ -58,7 +58,11 @@ public class TickHandler {
                         EntityType<?> entityType = entityTypeCache.get(entityId);
                         if (entityType == null) continue;
 
-                        serverLevel.getEntities(entityType, Entity::isAlive).forEach(entity -> entity.remove(Entity.RemovalReason.DISCARDED));
+                        serverLevel.getEntities(entityType, Entity::isAlive).forEach((entity) -> {
+                            if (!entity.getTags().contains("playerItem"))
+                                entity.remove(Entity.RemovalReason.DISCARDED);
+                        });
+
                     }
                 }
             }

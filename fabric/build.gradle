@@ -7,6 +7,13 @@ architectury {
     fabric()
 }
 
+repositories {
+    maven {
+        name = "Fabric"
+        url = "https://maven.fabricmc.net/"
+    }
+}
+
 configurations {
     common {
         canBeResolved = true
@@ -26,6 +33,9 @@ configurations {
 
 dependencies {
     modImplementation "net.fabricmc:fabric-loader:$rootProject.fabric_loader_version"
+
+    modCompileOnly "net.fabricmc.fabric-api:fabric-entity-events-v1:2.1.1+c9e47273e8"
+    modRuntimeOnly "net.fabricmc.fabric-api:fabric-entity-events-v1:2.1.1+c9e47273e8"
 
 
     modImplementation "dev.architectury:architectury-fabric:$rootProject.architectury_api_version"

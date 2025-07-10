@@ -34,9 +34,9 @@ subprojects {
 
         // Inclure uniquement la version correcte de MidnightLib
         if (project.name == "fabric") {
-            modImplementation include("maven.modrinth:midnightlib:${midnightlib_version}+1.21.4-fabric")
+            modImplementation include("maven.modrinth:midnightlib:1.7.5+1.21.6-fabric")
         } else if (project.name == "neoforge") {
-            modImplementation include("maven.modrinth:midnightlib:${midnightlib_version}+1.21.4-neoforge")
+            modImplementation include("maven.modrinth:midnightlib:1.7.5+1.21.6-neoforge")
         }
     }
 
